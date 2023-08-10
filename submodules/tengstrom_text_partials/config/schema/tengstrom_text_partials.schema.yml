@@ -1,0 +1,14 @@
+tengstrom_text_partials.tengstrom_text_partial.*:
+  type: config_entity
+  label: Text Partial
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    content:
+      type: string

@@ -1,0 +1,5 @@
+entity.tengstrom_text_partial.overview:
+  title: Text Partials
+  parent: system.admin_structure
+  description: 'List of text partials to extend site functionality.'
+  route_name: entity.tengstrom_text_partial.collection

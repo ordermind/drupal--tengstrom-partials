@@ -1,0 +1,5 @@
+entity.tengstrom_text_partial.add_form:
+  route_name: 'entity.tengstrom_text_partial.add_form'
+  title: 'Add text partial'
+  appears_on:
+    - entity.tengstrom_text_partial.collection

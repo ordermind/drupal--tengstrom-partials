@@ -1,0 +1,8 @@
+name: Tengström Partials
+type: module
+description: Provides config entity types for partial content
+package: Tengström Profile
+core_version_requirement: ^9 || ^10
+
+dependencies:
+  - tengstrom_mainmenu

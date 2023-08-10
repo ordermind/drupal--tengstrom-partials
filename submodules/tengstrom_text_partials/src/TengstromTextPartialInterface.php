@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\tengstrom_text_partials;
 
 use Drupal\Core\Config\Entity\ConfigEntityInterface;

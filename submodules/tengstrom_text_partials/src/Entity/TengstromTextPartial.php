@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\tengstrom_text_partials\Entity;
 
 use Drupal\Core\Config\Entity\ConfigEntityBase;
@@ -42,7 +44,8 @@ use Drupal\tengstrom_text_partials\TengstromTextPartialInterface;
  *   config_export = {
  *     "id",
  *     "label",
- *     "content"
+ *     "contentValue",
+ *     "contentFormat"
  *   }
  * )
  */
@@ -50,30 +53,18 @@ class TengstromTextPartial extends ConfigEntityBase implements TengstromTextPart
 
   /**
    * The text partial ID.
-   *
-   * @var string
    */
-  protected $id;
+  protected string $id;
 
   /**
    * The text partial label.
-   *
-   * @var string
    */
-  protected $label;
-
-  /**
-   * The text partial status.
-   *
-   * @var bool
-   */
-  protected $status;
+  protected string $label;
 
   /**
    * The tengstrom_text_partial content.
-   *
-   * @var string
    */
-  protected $content;
+  protected string $contentValue;
+  protected string $contentFormat;
 
 }

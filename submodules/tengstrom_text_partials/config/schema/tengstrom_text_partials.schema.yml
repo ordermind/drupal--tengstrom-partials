@@ -10,5 +10,7 @@ tengstrom_text_partials.tengstrom_text_partial.*:
       label: Label
     uuid:
       type: string
-    content:
+    contentValue:
+      type: string
+    contentFormat:
       type: string

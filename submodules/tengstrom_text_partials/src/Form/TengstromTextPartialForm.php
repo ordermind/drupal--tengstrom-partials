@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Drupal\tengstrom_text_partials\Form;
 
 use Drupal\Core\Entity\EntityForm;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\EntityWithPluginCollectionInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -41,11 +39,13 @@ class TengstromTextPartialForm extends EntityForm {
       '#disabled' => !$this->entity->isNew(),
     ];
 
+    $content = $this->entity->get('content');
+
     $form['content'] = [
       '#type' => 'text_format',
       '#title' => $this->t('Content'),
-      '#default_value' => $this->entity->get('contentValue'),
-      '#format' => $this->entity->get('contentFormat') ?: 'filtered_html',
+      '#default_value' => $content['value'] ?? '',
+      '#format' => $content['format'] ?? 'filtered_html',
       '#allowed_formats' => ['filtered_html'],
       '#hide_help' => TRUE,
       '#hide_guidelines' => TRUE,
@@ -66,31 +66,6 @@ class TengstromTextPartialForm extends EntityForm {
     $this->messenger()->addStatus($message);
     $form_state->setRedirectUrl($this->entity->toUrl('collection'));
     return $result;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function copyFormValuesToEntity(EntityInterface $entity, array $form, FormStateInterface $form_state) {
-    $values = $form_state->getValues();
-
-    if ($this->entity instanceof EntityWithPluginCollectionInterface) {
-      // Do not manually update values represented by plugin collections.
-      $values = array_diff_key($values, $this->entity->getPluginCollections());
-    }
-
-    // @todo This relies on a method that only exists for config and content
-    //   entities, in a different way. Consider moving this logic to a config
-    //   entity specific implementation.
-    foreach ($values as $key => $value) {
-      if ($key === 'content') {
-        $entity->set('contentValue', $value['value']);
-        $entity->set('contentFormat', $value['format']);
-      }
-      else {
-        $entity->set($key, $value);
-      }
-    }
   }
 
 }

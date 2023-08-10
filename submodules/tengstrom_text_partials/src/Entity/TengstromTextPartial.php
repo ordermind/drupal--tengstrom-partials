@@ -44,8 +44,7 @@ use Drupal\tengstrom_text_partials\TengstromTextPartialInterface;
  *   config_export = {
  *     "id",
  *     "label",
- *     "contentValue",
- *     "contentFormat"
+ *     "content"
  *   }
  * )
  */
@@ -63,8 +62,9 @@ class TengstromTextPartial extends ConfigEntityBase implements TengstromTextPart
 
   /**
    * The tengstrom_text_partial content.
+   *
+   * @property array{value: string, format: string}
    */
-  protected string $contentValue;
-  protected string $contentFormat;
+  protected array $content;
 
 }

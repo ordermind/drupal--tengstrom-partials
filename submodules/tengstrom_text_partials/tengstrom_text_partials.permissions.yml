@@ -1,2 +1,11 @@
 administer tengstrom_text_partial:
   title: 'Administer text partial'
+
+delete tengstrom_text_partialt:
+  title: Delete text partial
+create tengstrom_text_partial:
+  title: text partial
+view tengstrom_text_partial:
+  title: text partial
+edit tengstrom_text_partial:
+  title: text partial

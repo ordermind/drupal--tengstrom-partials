@@ -5,4 +5,6 @@ package: Tengström Profile
 core_version_requirement: ^9 || ^10
 
 dependencies:
-  - tengstrom_mainmenu
+  - accordion_table:accordion_table
+  - tengstrom_general:tengstrom_general
+  - tengstrom_mainmenu:tengstrom_mainmenu

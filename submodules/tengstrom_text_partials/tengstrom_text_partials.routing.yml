@@ -12,7 +12,7 @@ entity.tengstrom_text_partial.add_form:
     _entity_form: 'tengstrom_text_partial.add'
     _title: 'Add a text partial'
   requirements:
-    _permission: 'administer tengstrom_text_partial'
+    _permission: 'create tengstrom_text_partial'
 
 entity.tengstrom_text_partial.edit_form:
   path: '/admin/structure/tengstrom-text-partial/{tengstrom_text_partial}'
@@ -20,7 +20,7 @@ entity.tengstrom_text_partial.edit_form:
     _entity_form: 'tengstrom_text_partial.edit'
     _title: 'Edit a text partial'
   requirements:
-    _permission: 'administer tengstrom_text_partial'
+    _permission: 'edit tengstrom_text_partial'
 
 entity.tengstrom_text_partial.delete_form:
   path: '/admin/structure/tengstrom-text-partial/{tengstrom_text_partial}/delete'
@@ -28,4 +28,4 @@ entity.tengstrom_text_partial.delete_form:
     _entity_form: 'tengstrom_text_partial.delete'
     _title: 'Delete a text partial'
   requirements:
-    _permission: 'administer tengstrom_text_partial'
+    _permission: 'delete tengstrom_text_partial'

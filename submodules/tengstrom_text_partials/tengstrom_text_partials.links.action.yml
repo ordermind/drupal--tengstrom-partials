@@ -1,5 +1,8 @@
 entity.tengstrom_text_partial.add_form:
   route_name: 'entity.tengstrom_text_partial.add_form'
   title: 'Add text partial'
+  # Using the MenuLinkAdd class adds a destination query string that redirects to the current page.
+  class: \Drupal\menu_ui\Plugin\Menu\LocalAction\MenuLinkAdd
   appears_on:
     - entity.tengstrom_text_partial.collection
+    - tengstrom_partials.list

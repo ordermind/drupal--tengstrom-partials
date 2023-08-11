@@ -34,25 +34,19 @@ class TengstromPartialsController extends ControllerBase {
       '#type' => 'accordion_table',
       '#header' => ['title' => $this->t('Title'), 'operations' => $this->t('Operations')],
       '#rows' => array_map(function (TengstromTextPartial $entity) {
-        $operations = $this->entityListBuilder->getOperations($entity);
-        dump($operations);
-
         return [
-          'title' => $entity->label(),
-          'operations' => [
-            '#theme' => 'item_list',
-            '#list_type' => 'ul',
-            '#items' => array_map(function (array $operation) {
-              return [
-                '#type' => 'link',
-                '#title' => $operation['title'],
-                '#url' => $operation['url'],
-                '#weight' => $operation['weight'],
-              ];
-            }, $operations),
+          'data' => [
+            'title' => $entity->label(),
+            'operations' => [
+              'data' => [
+                '#type' => 'operations',
+                '#links' => $this->entityListBuilder->getOperations($entity),
+              ],
+            ],
           ],
         ];
-      }, $entities),
+      }, array_values($entities)),
+      '#separate_operations' => TRUE,
     ];
 
     return $list;

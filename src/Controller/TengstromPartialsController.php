@@ -32,7 +32,10 @@ class TengstromPartialsController extends ControllerBase {
 
     $list = [
       '#type' => 'accordion_table',
-      '#header' => ['title' => $this->t('Title'), 'operations' => $this->t('Operations')],
+      '#header' => [
+        'title' => $this->t('Title'),
+        'operations' => $this->t('Operations'),
+      ],
       '#rows' => array_map(function (TengstromTextPartial $entity) {
         return [
           'data' => [

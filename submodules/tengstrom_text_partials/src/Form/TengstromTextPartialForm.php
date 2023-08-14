@@ -21,6 +21,9 @@ class TengstromTextPartialForm extends EntityForm {
 
     $form = parent::form($form, $form_state);
 
+    $form['#attributes']['class'][] = 'tengstrom-form';
+    $form['#attributes']['class'][] = 'entity-form';
+
     $form['label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Label'),

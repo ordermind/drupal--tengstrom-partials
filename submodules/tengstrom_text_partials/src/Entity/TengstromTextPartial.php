@@ -67,4 +67,12 @@ class TengstromTextPartial extends ConfigEntityBase implements TengstromTextPart
    */
   protected array $content;
 
+  public function toRenderArray(): array {
+    return [
+      '#type' => 'processed_text',
+      '#text' => $this->content['value'] ?? '',
+      '#format' => $this->content['format'] ?? 'text_plain',
+    ];
+  }
+
 }

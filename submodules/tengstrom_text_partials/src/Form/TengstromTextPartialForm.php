@@ -47,8 +47,6 @@ class TengstromTextPartialForm extends EntityForm {
       '#default_value' => $content['value'] ?? '',
       '#format' => $content['format'] ?? 'filtered_html',
       '#allowed_formats' => ['filtered_html'],
-      '#hide_help' => TRUE,
-      '#hide_guidelines' => TRUE,
     ];
 
     return $form;

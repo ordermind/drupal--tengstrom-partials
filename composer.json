@@ -20,7 +20,7 @@
     ],
     "require": {
         "drupal/accordion_table": "dev-master",
-        "drupal/core": "^9.4 || ^10",
+        "drupal/core": "^10 || ^11",
         "drupal/tengstrom_general": "dev-master",
         "drupal/tengstrom_mainmenu": "dev-master"
     }

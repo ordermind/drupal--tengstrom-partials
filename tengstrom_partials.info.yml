@@ -2,7 +2,7 @@ name: Tengström Partials
 type: module
 description: Provides config entity types for partial content
 package: Tengström Profile
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 
 dependencies:
   - accordion_table:accordion_table

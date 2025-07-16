@@ -2,7 +2,7 @@ name: Tengström Text Partials
 type: module
 description: Provides text partials
 package: Tengström Profile
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 
 dependencies:
   - tengstrom_partials:tengstrom_partials

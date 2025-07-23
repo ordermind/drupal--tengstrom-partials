@@ -1,6 +1,0 @@
-tengstrom_partials.list:
-  path: '/admin/structure/tengstrom-partial'
-  defaults:
-    _controller: '\Drupal\tengstrom_partials\Controller\TengstromPartialsController::list'
-  requirements:
-    _permission: 'tengstrom_partials.access_overview'

@@ -3,3 +3,9 @@ entity.tengstrom_text_partial.overview:
   parent: system.admin_structure
   description: 'List of text partials to extend site functionality.'
   route_name: entity.tengstrom_text_partial.collection
+
+tengstrom_text_partial.list:
+  title: 'Text blocks'
+  parent: tengstrom_mainmenu.config
+  route_name: entity.tengstrom_text_partial.collection
+  weight: 2

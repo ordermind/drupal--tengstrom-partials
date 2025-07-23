@@ -1,5 +1,0 @@
-tengstrom_partials.list:
-  title: 'Text blocks'
-  parent: tengstrom_mainmenu.config
-  route_name: tengstrom_partials.list
-  weight: 2

@@ -16,7 +16,7 @@ class TengstromTextPartialListBuilder extends ConfigEntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['label'] = $this->t('Label');
+    $header['label'] = $this->t('Title');
 
     return $header + parent::buildHeader();
   }

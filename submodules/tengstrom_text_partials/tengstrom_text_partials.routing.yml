@@ -2,7 +2,7 @@ entity.tengstrom_text_partial.collection:
   path: '/admin/structure/tengstrom-text-partial'
   defaults:
     _entity_list: 'tengstrom_text_partial'
-    _title: 'Text Partial configuration'
+    _title: 'Text blocks'
   requirements:
     _permission: 'view tengstrom_text_partial list'
 

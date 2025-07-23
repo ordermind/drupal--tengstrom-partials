@@ -4,7 +4,7 @@ entity.tengstrom_text_partial.collection:
     _entity_list: 'tengstrom_text_partial'
     _title: 'Text blocks'
   requirements:
-    _permission: 'view tengstrom_text_partial list'
+    _permission: 'access tengstrom_text_partial list'
 
 entity.tengstrom_text_partial.add_form:
   path: '/admin/structure/tengstrom_text_partial/add'

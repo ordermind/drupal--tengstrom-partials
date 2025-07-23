@@ -14,7 +14,7 @@ class TengstromTextPartialPartialRouteProvider extends AdminHtmlRouteProvider {
    */
   protected function getCollectionRoute(EntityTypeInterface $entity_type) {
     if ($route = parent::getCollectionRoute($entity_type)) {
-      $route->setRequirement('_permission', 'view tengstrom_text_partial list');
+      $route->setRequirement('_permission', 'access tengstrom_text_partial list');
       return $route;
     }
   }

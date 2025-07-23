@@ -1,8 +1,8 @@
 administer tengstrom_text_partial:
   title: 'Administer text partial'
 
-view tengstrom_text_partial list:
-  title: View text partial list
+access tengstrom_text_partial list:
+  title: Access text partial list
 view tengstrom_text_partial:
   title: View text partial
 create tengstrom_text_partial:

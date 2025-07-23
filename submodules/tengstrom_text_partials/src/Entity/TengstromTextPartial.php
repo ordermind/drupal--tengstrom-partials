@@ -22,6 +22,7 @@ use Drupal\tengstrom_text_partials\TengstromTextPartialInterface;
  *   ),
  *   handlers = {
  *     "list_builder" = "Drupal\tengstrom_text_partials\TengstromTextPartialListBuilder",
+ *     "access" = "Drupal\tengstrom_text_partials\TengstromTextPartialAccessControlHandler",
  *     "form" = {
  *       "add" = "Drupal\tengstrom_text_partials\Form\TengstromTextPartialForm",
  *       "edit" = "Drupal\tengstrom_text_partials\Form\TengstromTextPartialForm",

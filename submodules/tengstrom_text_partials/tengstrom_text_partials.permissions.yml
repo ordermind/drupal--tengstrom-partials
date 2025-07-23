@@ -1,5 +1,6 @@
 administer tengstrom_text_partial:
   title: 'Administer text partial'
+  restrict access: true
 
 access tengstrom_text_partial list:
   title: Access text partial list
